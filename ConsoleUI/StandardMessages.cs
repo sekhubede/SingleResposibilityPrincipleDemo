@@ -18,5 +18,10 @@ namespace ConsoleUI
         {
             ReadLine();
         }
+
+        public static void DisplayValidationError(string fieldName)
+        {
+           WriteLine($"You did not give us a valid { fieldName }!");
+        }
     }
 }
