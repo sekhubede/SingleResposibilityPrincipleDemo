@@ -19,8 +19,7 @@ namespace ConsoleUI
                 return;
             }
 
-            // Create a username for the person
-            WriteLine($"Your username is {user.FirstName.Substring(0, 1)}{user.LasName}");
+            AccountGenerator.CeateAccount(user);
 
             StandardMessages.EndApplication();
 
