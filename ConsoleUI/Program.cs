@@ -7,7 +7,7 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            WriteLine("Welcome to my application!");
+            StandardMessages.WelcomeMessage();
 
             // Ask for user information
             Person user = new Person();
@@ -22,21 +22,21 @@ namespace ConsoleUI
             if (string.IsNullOrWhiteSpace(user.FirstName))
             {
                 WriteLine("You did not give us a valid first name!");
-                ReadLine();
+                StandardMessages.EndApplication();
                 return;
             }
 
             if(string.IsNullOrWhiteSpace(user.LasName))
             {
                 WriteLine("You did not give us a valid last name!");
-                ReadLine();
+                StandardMessages.EndApplication();
                 return;
             }
 
             // Create a username for the person
             WriteLine($"Your username is {user.FirstName.Substring(0, 1)}{user.LasName}");
 
-            ReadLine();
+            StandardMessages.EndApplication();
 
         }
     }
